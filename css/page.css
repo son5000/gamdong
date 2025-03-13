@@ -1,0 +1,102 @@
+.home {
+    * { user-select: none;}
+    > div {
+        height: 100vh;
+        position: relative;
+        /* background-image: url(/public/images/home-bg.png); */
+        background-color: rgb(241, 250, 255);
+        > img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 50%;
+            min-width: 240px;
+            max-width: 500px;
+            transform: translate(-50%,-50%); 
+        }
+        nav {
+            margin-inline: auto;
+            max-width: 1600px;
+            ul {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                li {
+                    width: 50%;
+                    height: 50vh;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: transparent;
+                    font-size: 1px;
+                    a { 
+                        display: block;
+                        img {
+                            width: 300px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.artist {
+    background-color: rgb(241, 250, 255);
+    background-image: url(/public/images/home-bg.png);
+    > div {
+        > div {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            > img {
+                min-width: 150px;
+                max-width: 300px;
+                object-fit: contain;
+            }
+            > div {
+                width: 33%;
+                max-width: 480px;
+                min-width: 350px;
+                > div {
+                    margin-bottom: 30px;
+                }
+            }
+            .right {
+                margin-top: 50px;
+            }
+        }
+    }
+    .item {
+        .top{
+            background-color: black;
+            padding: 20px ;
+            padding-top: 34px;
+            color: white;
+            * {
+                display: block;
+            }
+            > strong {
+                font-size: 34px;
+            }
+        }
+        .bottom{
+            padding-inline: 20px;
+            border: 2px solid black;
+            background-color: white;
+            font-weight: 500;
+            ul {
+                li {
+                    padding-block: 14px;
+                    line-height: 20px;
+                    &:not(:last-of-type){
+                        border-bottom: 1px solid black;
+                    }
+                }
+            }
+        }
+    }
+}

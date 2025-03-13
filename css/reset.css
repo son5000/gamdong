@@ -1,0 +1,141 @@
+*, *::before, *::after{
+    box-sizing: border-box; 
+}
+
+*{
+    margin: 0; 
+    padding: 0;  
+    border: 0;
+}
+
+ul[role='list'], ol[role='list']{
+    list-style: none; 
+}
+
+html:focus-within{
+    scroll-behavior: smooth; 
+}
+
+a:not([class]){
+    text-decoration-skip-ink: auto; 
+}
+
+a:visited, a:active, a:focus {
+    color: inherit; 
+    outline: none; 
+}
+
+img, picture, svg, video, canvas{
+    max-width: 100%;
+    height: auto; 
+    vertical-align: middle; 
+    font-style: italic; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+input, button, textarea, select{
+    font: inherit; 
+}
+
+li {list-style: none;}
+
+@media (prefers-reduced-motion: reduce){
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+        transition: none;
+    }
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    font-family: "Poppins","Pretendard-Regular", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    
+}
+
+button { 
+    border: 0;
+}
+
+:root {
+    --white : #fff;
+    --light-gray: #666;
+    --dark-gray: #8b9f9f;
+    --theme-dark: #142422;
+    --theme-light: #758ab9;
+    --theme-dark-sub:#5a6452;
+    --theme-dark-font:#a2b492;
+    --theme-light-content:#fff;
+    --theme-dark-content:#222525;
+
+    --fs-10: 10px;
+    --fs-11: 11px;
+    --fs-12: 12px;
+    --fs-13: 13px;
+    --fs-14: 14px;
+    --fs-15: 15px;
+    --fs-16: 16px;
+    --fs-18: 18px;
+    --fs-20: 20px;
+    --fs-22: 22px;
+    --fs-24: 24px;
+    --fs-26: 26px;
+    --fs-28: 28px;
+    --fs-30: 30px;
+    --fs-34: 34px;
+}
+
+@media ( width < 600px) {
+
+    :root {
+        --fs-10: 8px;
+        --fs-11: 9px;
+        --fs-12: 10px;
+        --fs-13: 11px;
+        --fs-14: 12px;
+        --fs-15: 13px;
+        --fs-16: 14px;
+        --fs-18: 16px;
+        --fs-20: 18px;
+        --fs-22: 20px;
+        --fs-24: 22px;
+        --fs-26: 24px;
+        --fs-28: 26px;
+        --fs-30: 28px;
+        --fs-34: 32px;
+    }
+}
+
+.contentLayout {
+    padding: 100px 30px;
+}
+
+.maxWidth1440 {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.title {
+    display: block;
+    font-size: 34px;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+.title::before {
+    content: "<< ";
+}
