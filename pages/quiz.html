@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/import.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="contentLayout">
+        <div class="quiz maxWidth1440"><samp></samp>
+            <a class="title" href="/">Quiz</a>
+            <div class="slideContainer">
+                <div class="cover">
+                    <p>
+                        <span>당</span><span>신</span><span>은 </span><span>감</span><span>동</span><span>이</span><span>에 </span><span>대</span><span>해 </span><span>얼</span><span>마</span><span>나 </span><span>알</span><span>고 </span><span>있</span><span>습</span><span>니</span><span>까</span><span>?</span>
+                    </p>
+                    <p><span>2025</span>년 감동 학력 고사</p>
+                    
+                    <button class="start">
+                        START
+                    </button>
+                    <img src="/public/images/감동이_10.png" alt="">
+                </div>
+                <div class="controlBox">
+                    <button  class="custom-prev"></button>
+                    <button class="submit">정답  확인</button>
+                    <button  class="custom-next"></button>
+                </div>
+                <div class="bxslider">
+                    <div>
+                        <div class="slideItem">
+                            <p class="Q">
+                                 <mark>Q</mark>. 다음 보기 중 감동이의 생일은 언제일까요?
+                            </p>
+                            <ul class="A">
+                                <li class="list">2021년 8월 26일</li>
+                                <li class="list">2021년 8월 27일</li>
+                                <li class="list O">2021년 8월 28일</li>
+                                <li class="list">2021년 8월 29일</li>
+                            </ul>
+                            <div class="result correct">
+                                <div>
+                                    <p>정답입니다! 😀</p>
+                                </div>
+                            </div>
+                            <div class="result wrong">
+                                <div>
+                                    <p>틀렸습니다! 😥</p> 
+                                    <p>감동이의 생일은 <mark>3</mark>번 2021년 8월 28일 입니다!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="slideItem">
+                            <p class="Q">
+                                 <mark>Q</mark>. 다음 보기 중 감동이의 별명이 아닌것은?
+                            </p>
+                            <ul class="A">
+                                <li class="list">똥개</li>
+                                <li class="list O">똥</li>
+                                <li class="list">원숭이</li>
+                                <li class="list">똥싸개</li>
+                            </ul>
+                            <div class="result correct">
+                                <div>
+                                    <p>정답입니다!!😀</p>
+                                </div>
+                            </div>
+                            <div class="result wrong">
+                                <div>
+                                    <p>틀렸습니다! 😥</p>
+                                    <p> 
+                                       감동이의 별명이 아닌것은 <mark>3</mark>번 '똥' 입니다! <br />
+                                       감동이를 '똥' 이라고 부르신다면 방망이 들고 찾아가겠습니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="slideItem">
+                            <p class="Q">
+                                 <mark>Q</mark>. 다음 보기 중  감동이의 최애 과일은 무엇일까요?
+                            </p>
+                            <ul class="A">
+                                <li class="list O">바나나</li>
+                                <li class="list">사과</li>
+                                <li class="list">귤</li>
+                                <li class="list">복숭아</li>
+                            </ul>
+                            <div class="result correct">
+                                <div>
+                                    <p>정답입니다! 😀</p>
+                                </div>
+                            </div>
+                            <div class="result wrong">
+                                <div>
+                                    <p>틀렸습니다! 😥</p>
+                                    <p>
+                                        감동이의 최애 과일은 <mark>1</mark>번 '바나나' 입니다! <br />
+                                        길가다 마주치면 바나나 한 송이 사주세요. 환장합니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+        $('.start').click(function(){
+            $('.cover').addClass('active');
+        })
+        $('.bxslider').bxSlider({
+            captions: true,
+            mode: 'fade',
+            pager: false,
+            nextSelector: '.custom-next',
+            prevSelector: '.custom-prev',
+            controls: true, 
+            nextText: '다음 문제',
+            prevText: '이전 문제'
+        });
+        $('.list').click(function(){
+            $('.list').removeClass('active');
+            $(this).addClass('active');
+        })
+        $('.submit').click(function(){
+            currentSlide = $('.slideItem:visible').first(); 
+            if (currentSlide.find('.list').hasClass('active') === false) {
+                alert('보기중에 답을 선택해주세요!')
+                return; 
+            }
+
+            if(currentSlide.find('.O').hasClass('active')) {
+                currentSlide.find('.correct').addClass('active');
+            } else {
+                currentSlide.find('.wrong').addClass('active');
+            }
+            
+        })
+    });
+    </script>
+</body>
+</html>

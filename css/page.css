@@ -1,10 +1,7 @@
 .home {
     * { user-select: none;}
-    > div {
         height: 100vh;
         position: relative;
-        /* background-image: url(/public/images/home-bg.png); */
-        background-color: rgb(241, 250, 255);
         > img {
             position: absolute;
             left: 50%;
@@ -39,14 +36,11 @@
                 }
             }
         }
-    }
+    
 }
 
 
 .artist {
-    background-color: rgb(241, 250, 255);
-    background-image: url(/public/images/home-bg.png);
-    > div {
         > div {
             display: flex;
             justify-content: space-between;
@@ -69,34 +63,253 @@
                 margin-top: 50px;
             }
         }
+    .bottom {
+        padding-inline: 20px;
     }
+}
+
+.album {
+        > div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
     .item {
-        .top{
-            background-color: black;
-            padding: 20px ;
-            padding-top: 34px;
-            color: white;
-            * {
-                display: block;
-            }
-            > strong {
-                font-size: 34px;
+        width: 30%;
+        max-width: 350px;
+        min-width: 300px;
+        > .top {
+            p {
+                font-size: 22px;
             }
         }
-        .bottom{
-            padding-inline: 20px;
-            border: 2px solid black;
-            background-color: white;
-            font-weight: 500;
-            ul {
-                li {
-                    padding-block: 14px;
-                    line-height: 20px;
-                    &:not(:last-of-type){
-                        border-bottom: 1px solid black;
-                    }
+        > .bottom {
+            > div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+                height: 450px;
+                position: relative;
+                > img {
+                    max-width: 300px;
+                    max-height: 400px;
+                    object-fit: contain;
+                    overflow: hidden;
+                    border-radius: 8px;
+                }
+                > time {
+                    position: absolute;
+                    bottom: 3px;
+                    right: 15px;
                 }
             }
         }
+    }
+}
+
+.quiz {
+    .slideContainer {
+        width: 100%;
+        border-radius: 8px;
+        position: relative;
+        background-color: aqua;
+        min-width: 350px;
+    }
+    .cover {
+        position: absolute;
+        inset: 0;
+        z-index: 9999;
+        background: url(/public/images/quiz/quiz-bg.jpg) repeat center / auto;
+        padding-inline: 100px;
+        padding-top: 100px;
+        &.active {
+            display: none;
+        }
+        > p {
+            display: inline-block;
+            background-color: white;
+            font-size: 60px;
+            font-weight: 600;
+            margin-top: 50px;
+            line-height: 50px;
+            &:nth-of-type(2){
+                margin-bottom: 200px;
+            }
+            > span:nth-of-type(1){color: red;}
+            > span:nth-of-type(2){color: rgb(235, 126, 37);}
+            > span:nth-of-type(3){color: rgb(243, 247, 59);}
+            > span:nth-of-type(4){color: rgb(149, 240, 46);}
+            > span:nth-of-type(5){color: rgb(44, 173, 82);}
+            > span:nth-of-type(6){color: rgb(62, 202, 195);}
+            > span:nth-of-type(7){color: rgb(51, 115, 211);}
+            > span:nth-of-type(8){color: rgb(44, 58, 185);}
+            > span:nth-of-type(9){color: rgb(68, 37, 153);}
+            > span:nth-of-type(10){color: rgb(219, 56, 178);}
+            > span:nth-of-type(11){color: rgb(255, 0, 234);}
+            > span:nth-of-type(12){color: rgb(236, 146, 188);}
+            > span:nth-of-type(13){color: red;}
+            > span:nth-of-type(14){color: rgb(216, 130, 49);}
+            > span:nth-of-type(15){color: rgb(236, 240, 40);}
+            > span:nth-of-type(16){color: rgb(130, 233, 46);}
+            > span:nth-of-type(17){color: rgb(44, 206, 198);}
+            > span:nth-of-type(18){color: rgb(55, 45, 194);}
+        }
+        > img {
+            width: 30%;
+            position: absolute;
+            right: 30px;
+            bottom: 30px;
+        }
+        > button {
+            display: block;
+            width: 300px;
+            height: 200px;
+            font-size: 50px;
+            background-color: cornsilk;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        > button:hover {
+            transform: scale(120%);
+            background-color: orange;
+        }
+    }
+    .controlBox{
+        width: 100%;
+        bottom: -50px;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        gap: 15%;
+        z-index: 999;
+        padding: 15px;
+        position: absolute;
+        display: flex; 
+        justify-content: center;
+        >  button {
+            cursor: pointer;
+            line-height: 75px;
+            width: 10%;
+            border-radius: 8px;
+            min-width: 70px;
+            background-color: rgb(241, 243, 104);
+            display: block;
+            > a {
+                display: block;
+            }
+            &:nth-of-type(2n){
+                background-color: rgb(147, 240, 147);
+            }
+        }
+    }
+    .bxslider{
+        >  div  {
+            /* z-index: 9;/ */
+            background-color: rgb(134, 181, 241);  
+            width: 100%;
+            aspect-ratio: 1/0.65;
+        }
+    }
+    .slideItem{
+        width: 50%;
+        min-width: 500px;
+        margin-inline: auto;
+        margin-top: 80px;
+        padding-top: 5%;
+        padding-inline: 5%;
+        aspect-ratio: 1/1;
+        background-color: white;
+        position: relative;
+        /* z-index: 9999; */
+    } 
+    .Q {
+        font-size: 24px;
+        font-weight: 600;
+        margin-top: 150px;
+        margin-bottom: 50px;
+        mark {
+            color: red;
+            background-color: transparent;
+            font-size: 50px;
+            font-weight: 900;
+        }
+    }
+    .A {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        counter-reset: item;
+        > li {
+            width: 300px;
+            line-height: 50px;
+            counter-increment: item;
+            cursor: pointer;
+            position: relative;   
+            margin-left: auto;
+            text-align: right;
+            font-size: 18px;
+            &::after{
+                content: counter(item);
+                position: absolute;
+                left: 150px;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                border: 2px solid black;
+                width: 20px;
+                height: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 100%;
+            }
+        }
+        > li.active::after{
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+    }
+    .result {
+        position: absolute;
+        inset: 0;
+        align-items: center;
+        justify-content: center;
+        display: none;
+        &.correct {
+            background-color: rgba(127, 255, 212, 0.747);
+        }
+        &.wrong {
+            background-color: rgba(248, 65, 65, 0.699);
+        }
+        >  div {
+            z-index: 9999;
+            background-color: rgba(245, 245, 245, 0.74);
+            width: 80%;
+            aspect-ratio: 1/1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            > p{
+                text-align: center;
+            }
+            > p:nth-of-type(1){
+                font-size: 36px;
+                margin-bottom: 30px;
+            }
+            > p:nth-of-type(n+2){
+                font-size: 20px;
+                line-height: 30px;
+                > mark {
+                    background-color: transparent;
+                    color: rgb(236, 63, 32);
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+    .result.active{
+        display: flex;
     }
 }

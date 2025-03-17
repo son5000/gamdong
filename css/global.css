@@ -1,2 +1,35 @@
+body {
+    background-color: rgb(241, 250, 255);
+    background-image: url(/public/images/home-bg.png);
+}
 
+
+.item {
+    .top{
+        background-color: black;
+        padding: 20px ;
+        padding-top: 34px;
+        color: white;
+        * {
+            display: block;
+        }
+        > strong {
+            font-size: 34px;
+        }
+    }
+    .bottom{
+        border: 2px solid black;
+        background-color: white;
+        font-weight: 500;
+        ul {
+            li {
+                padding-block: 14px;
+                line-height: 20px;
+                &:not(:last-of-type){
+                    border-bottom: 1px solid black;
+                }
+            }
+        }
+    }
+}
 
