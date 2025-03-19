@@ -73,16 +73,6 @@ button {
 }
 
 :root {
-    --white : #fff;
-    --light-gray: #666;
-    --dark-gray: #8b9f9f;
-    --theme-dark: #142422;
-    --theme-light: #758ab9;
-    --theme-dark-sub:#5a6452;
-    --theme-dark-font:#a2b492;
-    --theme-light-content:#fff;
-    --theme-dark-content:#222525;
-
     --fs-10: 10px;
     --fs-11: 11px;
     --fs-12: 12px;

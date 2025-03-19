@@ -188,9 +188,12 @@
         position: absolute;
         display: flex; 
         justify-content: center;
+        &.active{
+            display: none;
+        }
         >  button {
             cursor: pointer;
-            line-height: 75px;
+            height: 75px;
             width: 10%;
             border-radius: 8px;
             min-width: 70px;
@@ -203,21 +206,26 @@
                 background-color: rgb(147, 240, 147);
             }
         }
+        .custom-prev.active{ display: none; }
+        .custom-next.active{display: none;}
+        .end{ display: none;}
+        .end.active { display: block;}
+        .submit.active { display: none;}
     }
     .bxslider{
         >  div  {
             /* z-index: 9;/ */
             background-color: rgb(134, 181, 241);  
             width: 100%;
-            aspect-ratio: 1/0.65;
+            aspect-ratio: 1/0.55;
         }
     }
     .slideItem{
-        width: 50%;
+        width: 42%;
         min-width: 500px;
         margin-inline: auto;
         margin-top: 80px;
-        padding-top: 5%;
+        padding-top: 1%;
         padding-inline: 5%;
         aspect-ratio: 1/1;
         background-color: white;
@@ -227,7 +235,7 @@
     .Q {
         font-size: 24px;
         font-weight: 600;
-        margin-top: 150px;
+        margin-top: 100px;
         margin-bottom: 50px;
         mark {
             color: red;
@@ -282,6 +290,18 @@
         &.wrong {
             background-color: rgba(248, 65, 65, 0.699);
         }
+        &.finish {
+            background-color: black;
+            > div {
+                background-color: white;
+                > mark {
+                    background-color: transparent;
+                    color: red;
+                    font-size: 50px;
+                    margin-bottom: 30px;
+                }
+            }
+        }
         >  div {
             z-index: 9999;
             background-color: rgba(245, 245, 245, 0.74);
@@ -311,5 +331,41 @@
     }
     .result.active{
         display: flex;
+    }
+}
+
+.game {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(241, 250, 255);
+    > div {
+        text-align: center;
+        height: 700px;
+        strong {
+            display: block;
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 30px;
+        }
+        p {
+            font-size: 20px;
+            text-align: center;
+            line-height: 30px;
+            margin-bottom: 30px;
+        }
+        a {
+            display: inline-block;
+            width: 100px;
+            background-color: aliceblue;
+            line-height: 50px;
+            border: 1px solid black;
+            border-radius: 8px;
+        }
+        img {
+            display: block;
+            max-width: 450px;
+        }
     }
 }
