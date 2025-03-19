@@ -2,8 +2,6 @@ body {
     background-color: rgb(241, 250, 255);
     background-image: url(/public/images/home-bg.png);
 }
-
-
 .item {
     .top{
         background-color: black;
