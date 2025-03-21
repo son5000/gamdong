@@ -1,51 +1,47 @@
+/* Home */
 .home {
+    height: 100vh;
     * { user-select: none;}
-        height: 100vh;
-        position: relative;
-        > img {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            width: 50%;
-            min-width: 240px;
-            max-width: 500px;
-            transform: translate(-50%,-50%); 
-        }
-        nav {
-            margin-inline: auto;
-            max-width: 1600px;
-            ul {
-                width: 100%;
+    > img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 50%;
+        min-width: 240px;
+        max-width: 500px;
+        transform: translate(-50%,-50%); 
+    }
+    nav {
+        max-width: 1600px;
+        margin-inline: auto;
+        ul {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            li {
+                width: 50%;
+                height: 50vh;
+                font-size: 1px;
+                color: transparent;
                 display: flex;
-                flex-wrap: wrap;
-                justify-content: space-around;
-                li {
-                    width: 50%;
-                    height: 50vh;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    color: transparent;
-                    font-size: 1px;
-                    a { 
-                        display: block;
-                        img {
-                            width: 300px;
-                        }
+                align-items: center;
+                justify-content: center;
+                a {
+                    img {
+                        width: 300px;
                     }
                 }
             }
         }
-    
+    }  
 }
-
-
+/* Artist */
 .artist {
         > div {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-
             > img {
                 min-width: 150px;
                 max-width: 300px;
@@ -67,7 +63,7 @@
         padding-inline: 20px;
     }
 }
-
+/* Album */
 .album {
         > div {
             display: flex;
@@ -77,27 +73,23 @@
         }
 
     .item {
-        width: 30%;
-        max-width: 350px;
-        min-width: 300px;
+        min-width: 350px;
         > .top {
             p {
-                font-size: 22px;
+                font-size: var(--fs-22);
             }
         }
         > .bottom {
             > div {
+                height: 450px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                gap: 15px;
-                height: 450px;
                 position: relative;
                 > img {
                     max-width: 300px;
                     max-height: 400px;
                     object-fit: contain;
-                    overflow: hidden;
                     border-radius: 8px;
                 }
                 > time {
@@ -109,135 +101,124 @@
         }
     }
 }
-
+/* Quiz */
+.quizBody {
+    background-image: url(/public/images/quiz/quiz-bg.jpg);
+}
 .quiz {
-    .slideContainer {
-        width: 100%;
-        border-radius: 8px;
-        position: relative;
-        background-color: aqua;
-        min-width: 350px;
-    }
     .cover {
-        position: absolute;
+        background-image: url(/public/images/quiz/quiz-bg.jpg);
+        position: fixed;
         inset: 0;
         z-index: 9999;
-        background: url(/public/images/quiz/quiz-bg.jpg) repeat center / auto;
-        padding-inline: 100px;
-        padding-top: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         &.active {
             display: none;
         }
-        > p {
-            display: inline-block;
-            background-color: white;
-            font-size: 60px;
-            font-weight: 600;
-            margin-top: 50px;
-            line-height: 50px;
-            &:nth-of-type(2){
-                margin-bottom: 200px;
-            }
-            > span:nth-of-type(1){color: red;}
-            > span:nth-of-type(2){color: rgb(235, 126, 37);}
-            > span:nth-of-type(3){color: rgb(243, 247, 59);}
-            > span:nth-of-type(4){color: rgb(149, 240, 46);}
-            > span:nth-of-type(5){color: rgb(44, 173, 82);}
-            > span:nth-of-type(6){color: rgb(62, 202, 195);}
-            > span:nth-of-type(7){color: rgb(51, 115, 211);}
-            > span:nth-of-type(8){color: rgb(44, 58, 185);}
-            > span:nth-of-type(9){color: rgb(68, 37, 153);}
-            > span:nth-of-type(10){color: rgb(219, 56, 178);}
-            > span:nth-of-type(11){color: rgb(255, 0, 234);}
-            > span:nth-of-type(12){color: rgb(236, 146, 188);}
-            > span:nth-of-type(13){color: red;}
-            > span:nth-of-type(14){color: rgb(216, 130, 49);}
-            > span:nth-of-type(15){color: rgb(236, 240, 40);}
-            > span:nth-of-type(16){color: rgb(130, 233, 46);}
-            > span:nth-of-type(17){color: rgb(44, 206, 198);}
-            > span:nth-of-type(18){color: rgb(55, 45, 194);}
-        }
-        > img {
-            width: 30%;
-            position: absolute;
-            right: 30px;
-            bottom: 30px;
-        }
-        > button {
-            display: block;
-            width: 300px;
-            height: 200px;
-            font-size: 50px;
-            background-color: cornsilk;
-            border-radius: 20px;
-            cursor: pointer;
-        }
-        > button:hover {
-            transform: scale(120%);
-            background-color: orange;
-        }
-    }
-    .controlBox{
-        width: 100%;
-        bottom: -50px;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        gap: 15%;
-        z-index: 999;
-        padding: 15px;
-        position: absolute;
-        display: flex; 
-        justify-content: center;
-        &.active{
-            display: none;
-        }
-        >  button {
-            cursor: pointer;
-            height: 75px;
-            width: 10%;
-            border-radius: 8px;
-            min-width: 70px;
-            background-color: rgb(241, 243, 104);
-            display: block;
-            > a {
+        > div { width: 100%;
+                max-width: 900px;
+                position: relative;
+                margin: 0 auto;
+                padding-inline: 15px;
+            > p {
                 display: block;
+                font-size: var(--fs-50);
+                font-weight: 600;
+                line-height: 70px;
+                &:nth-of-type(2) {
+                    font-size: var(--fs-36);
+                }
+                > span {
+                    background-color: white;
+                }
+                &:nth-of-type(2){
+                    margin-bottom: 200px;
+                }
+                > span:nth-of-type(1){color: red;}
+                > span:nth-of-type(2){color: rgb(235, 126, 37);}
+                > span:nth-of-type(3){color: rgb(243, 247, 59);}
+                > span:nth-of-type(4){color: rgb(149, 240, 46);}
+                > span:nth-of-type(5){color: rgb(44, 173, 82);}
+                > span:nth-of-type(6){color: rgb(62, 202, 195);}
+                > span:nth-of-type(7){color: rgb(51, 115, 211);}
+                > span:nth-of-type(8){color: rgb(44, 58, 185);}
+                > span:nth-of-type(9){color: rgb(68, 37, 153);}
+                > span:nth-of-type(10){color: rgb(219, 56, 178);}
+                > span:nth-of-type(11){color: rgb(255, 0, 234);}
+                > span:nth-of-type(12){color: rgb(236, 146, 188);}
+                > span:nth-of-type(13){color: red;}
+                > span:nth-of-type(14){color: rgb(216, 130, 49);}
+                > span:nth-of-type(15){color: rgb(236, 240, 40);}
+                > span:nth-of-type(16){color: rgb(130, 233, 46);}
+                > span:nth-of-type(17){color: rgb(44, 206, 198);}
+                > span:nth-of-type(18){color: rgb(55, 45, 194);}
             }
-            &:nth-of-type(2n){
-                background-color: rgb(147, 240, 147);
+            > img {
+                width: 30%;
+                max-width: 500px;
+                min-width: 250px;
+                position: absolute;
+                right: 0;
+                bottom: 0;
             }
+            div {
+                > button {
+                    width: 300px;
+                    line-height: 80px;
+                    font-size: 50px;
+                    background-color: cornsilk;
+                    border-radius: 20px;
+                }
+                > button:hover {
+                    transform: scale(120%);
+                    background-color: orange;
+                }
+            } 
         }
-        .custom-prev.active{ display: none; }
-        .custom-next.active{display: none;}
-        .end{ display: none;}
-        .end.active { display: block;}
-        .submit.active { display: none;}
     }
-    .bxslider{
-        >  div  {
-            /* z-index: 9;/ */
-            background-color: rgb(134, 181, 241);  
-            width: 100%;
-            aspect-ratio: 1/0.55;
-        }
-    }
-    .slideItem{
-        width: 42%;
-        min-width: 500px;
+    .quizBox {
+        padding: 50px 50px;
+        border-radius: 8px;
         margin-inline: auto;
-        margin-top: 80px;
-        padding-top: 1%;
-        padding-inline: 5%;
-        aspect-ratio: 1/1;
-        background-color: white;
-        position: relative;
-        /* z-index: 9999; */
-        /* z-index: 9999; */
-    } 
-    .Q {
-        font-size: 24px;
-        font-weight: 600;
-        margin-top: 100px;
         margin-bottom: 50px;
+        max-width: 750px;
+        background-color: rgb(255, 255, 255);
+        position: relative;
+    }
+    .btnBox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        > button {
+            width: 100px;
+            line-height: 50px;
+            background-color: rgb(146, 245, 195);
+            border-radius: 8px;
+            font-size: var(--fs-16);
+        }
+        .reset {
+            background-color: rgb(230, 154, 240);
+            width: 200px;
+            line-height: 70px;
+            font-size: var(--fs-22);
+            font-weight: 600;
+        }
+        .finalBtn {
+            background-color: rgb(248, 248, 150);
+            width: 200px;
+            line-height: 70px;
+            font-size: var(--fs-22);
+            font-weight: 600;
+        }
+    }
+    .Q {
+        font-size: var(--fs-22);
+        font-weight: 600;
+        margin-bottom: 30px;
+        display: block;
         mark {
             color: red;
             background-color: transparent;
@@ -247,22 +228,24 @@
     }
     .A {
         width: 100%;
-        display: flex;
-        flex-direction: column;
         counter-reset: item;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-end;
         > li {
-            width: 300px;
             line-height: 50px;
+            width: 150px;
             counter-increment: item;
             cursor: pointer;
             position: relative;   
             margin-left: auto;
             text-align: right;
-            font-size: 18px;
+            font-size: var(--fs-18);
             &::after{
                 content: counter(item);
                 position: absolute;
-                left: 150px;
+                left: -20px;
                 top: 50%;
                 transform: translate(-50%,-50%);
                 border: 2px solid black;
@@ -282,9 +265,8 @@
     .result {
         position: absolute;
         inset: 0;
-        align-items: center;
-        justify-content: center;
         display: none;
+        padding: 30px 50px;
         &.correct {
             background-color: rgba(127, 255, 212, 0.747);
         }
@@ -292,9 +274,23 @@
             background-color: rgba(248, 65, 65, 0.699);
         }
         &.finish {
-            background-color: black;
+            position: fixed;
+            width: 50%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgb(128, 176, 240);
             > div {
                 background-color: white;
+                > button {
+                    text-indent: -9999px;
+                    position: absolute;
+                    top: 30px;
+                    right: 50px;
+                    width: 50px;
+                    height: 50px;
+                    background-image: url(/public/images/quiz/close.png);
+                }
                 > mark {
                     background-color: transparent;
                     color: red;
@@ -306,8 +302,8 @@
         >  div {
             z-index: 9999;
             background-color: rgba(245, 245, 245, 0.74);
-            width: 80%;
-            aspect-ratio: 1/1;
+            width: 100%;
+            height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -316,7 +312,7 @@
                 text-align: center;
             }
             > p:nth-of-type(1){
-                font-size: 36px;
+                font-size: var(--fs-36);
                 margin-bottom: 30px;
             }
             > p:nth-of-type(n+2){
@@ -325,13 +321,16 @@
                 > mark {
                     background-color: transparent;
                     color: rgb(236, 63, 32);
-                    font-size: 26px;
+                    font-size: var(--fs-26);
                 }
             }
         }
     }
     .result.active{
-        display: flex;
+        display: block;
+    }
+    .btnBox {
+        text-align: center;
     }
 }
 

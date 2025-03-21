@@ -2,6 +2,27 @@ body {
     background-color: rgb(241, 250, 255);
     background-image: url(/public/images/home-bg.png);
 }
+
+.contentLayout {
+    padding: 100px 30px; 
+}
+
+.maxWidth1440 {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.title {
+    display: block;
+    font-size: var(--fs-34);
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+.title::before {
+    content: "<< ";
+}
+
 .item {
     .top{
         background-color: black;
@@ -12,7 +33,7 @@ body {
             display: block;
         }
         > strong {
-            font-size: 34px;
+            font-size: var(--fs-34);
         }
     }
     .bottom{

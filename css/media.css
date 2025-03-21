@@ -1,0 +1,98 @@
+/* Artist media width < 1200px  */
+@media ( width < 1200px) {
+    .artist {
+        > div {
+            justify-content: space-around;
+            > img {
+                max-width: 150px;
+                position: fixed;
+                right: 0;
+                bottom: 0;
+            }
+        }
+    }
+}
+
+@media (width < 600px ) {
+    .quiz {
+            .cover {
+            > div { 
+                > p {
+                    font-size: 26px;
+                    line-height: 50px;
+                    text-align: center;
+                    &:nth-of-type(2) {
+                        font-size: var(--fs-26);
+                    } 
+                }
+                > img {
+                    /* max-width: 150px; */
+                    min-width: 150px;
+                    right: 15px;
+                    bottom: 100px;
+                }
+                div {
+                    > button {
+                        width: 100%;
+                        line-height: 70px;                   
+                        font-size: 36px;
+                    }
+                    > button:hover {
+                        transform: scale(110%);
+                    }
+                } 
+            }
+        }
+        .quizBox {
+            width: 100%;
+            padding-inline: 10px;
+            padding-bottom: 10px;
+        }
+        .btnBox {
+            gap: 20px;
+            > button {
+                width: 80px;
+                line-height: 35px;
+            }
+            .reset {
+                width: 120px;
+                font-size: var(--fs-18);
+                line-height: 50px;
+            }
+            .finalBtn {
+                width: 120px;
+                line-height: 50px;
+                font-size: var(--fs-18);
+            }
+        }
+        .Q {
+            font-size: var(--fs-18);
+            margin-bottom: 20px;
+            display: block;
+            mark {
+                font-size: var(--fs-36);
+            }
+        }
+        .A { margin-bottom: 20px;
+            > li {
+                line-height: 50px;
+                width: 100px;
+                font-size: var(--fs-16);
+            }
+        }
+        .result {
+            padding: 15px 15px;
+            &.finish {
+                width: 100%;
+            }
+            >  div {
+                > p:nth-of-type(1){
+                    font-size: var(--fs-26);
+                }
+                > p:nth-of-type(n+2){
+                    font-size: var(--fs-18);
+                }
+            }
+        }
+    }
+}
