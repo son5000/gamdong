@@ -79,6 +79,7 @@ input {
     --fs-34: 34px;
     --fs-36: 36px;
     --fs-50: 50px;
+    --fs-70: 70px;
 }
 
 @media ( width < 600px) {
@@ -100,5 +101,6 @@ input {
         --fs-34: 32px;
         --fs-36: 34px;
         --fs-50: 42px;
+        --fs-70: 55px;
     }
 }

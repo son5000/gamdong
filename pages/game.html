@@ -4,16 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/import.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <title>GAME</title>
 </head>
 <body>
-    <div class="game">
-        <div>
-            <strong>컨텐츠 준비 중입니다.</strong>
-            <p>현재 페이지는 중비중입니다. <br /> 빠른 시일내에 서비스를 제공할 수 있도록 노력하겠습니다. <br /> 감사합니다.</p>
-            <a href="/">이전 페이지로</a>
-            <img src="/public/images/감동이_8.png" alt="">
+    <div class="contentLayout">
+        <div class="game maxWidth1440">
+            <a class="title" href="/">Game</a>
+            <div class="container">
+                <div class="cover">
+                    <strong>같은 <span>'동이'</span> 찾기👀</strong>
+                    <b>제한 시간은 1분! 모든 사진의 짝을 맞추세요!</b>
+                    <p>
+                        <mark>게임 설명</mark> <br>
+                        <span>총 20개의 영역에 감동이의 각기 다른 사진이 두 장씩 들어 있습니다. <br></span>
+                        <span>게임이 시작되면 잠시 동안 모든 사진이 공개됩니다. <br></span>
+                        <span>각 영역의 사진을 잘 기억한 후, 같은 사진 두 개를 연달아 선택하면 됩니다. <br></span>
+                        <span>제한 시간은 1분이며, 1분 안에 모든 짝을 맞추면 승리입니다!</span>
+                    </p>
+                    <button class="start">START</button>
+                </div>
+                <div class="main">
+                    <div class="timer">
+                        <div></div>
+                    </div>
+                    <div class="board">
+                    </div>
+                </div>
+                <div class="result lost">
+                    <strong>Game Over!</strong>
+                    <p>모든 짝을 다 찾지 못했어요!😥 다시 도전해보세요!</p>
+                    <a href="/pages/game.html">다시 시작</a>
+                </div>
+                <div class="result win">
+                    <strong>Game Over!</strong>
+                    <p> 당신의 기록은 : <span class="score"></span> 입니다!</p>
+                    <a href="/pages/game.html">다시 시작</a>
+                </div>
+            </div>
         </div>
     </div>
+    <script src="/lib/game.js"></script>
 </body>
 </html>
