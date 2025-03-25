@@ -381,35 +381,55 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            position: relative;
             &.active {
                 display: none;
+            }
+            &::before{
+                content: url(/public/images/game/돋보기.png);
+                position: absolute;
+                left: 0px;
+                top: 0px;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                right: 0px;
+                bottom: 0px;
+                width: 200px;
+                height: 200px;
+                background: url(/public/images/game/안경쓴감동이.png) no-repeat center / contain;
             }
             strong {
                 display: block;
                 text-align: center;
                 font-size: var(--fs-36);
                 margin-bottom: 20px;
+                color: rgb(0, 0, 0);
                 > span {
-                    color: rgb(216, 133, 8);
+                    background: url(/public/images/game/gamdong.png) no-repeat center / contain;
+                    color: transparent;
+                    background-color: rgb(131, 194, 245);
+                    border-radius: 100%;
                 }
             }
             b {
                 font-size: var(--fs-22);
                 display: block;
                 margin-bottom: 20px;
-                color: rgb(64, 100, 167);
+                color: rgb(76, 77, 77);
+                > span:nth-of-type(1) {
+                    color: red;
+                }
+                > span:nth-of-type(2) {
+                    color: rgb(36, 67, 170);
+                }
             }
             p { 
                 margin-bottom: 30px;
                 font-size: var(--fs-16);
-                > mark {
-                    display: block;
-                    text-align: center;
-                    font-size: var(--fs-28);
-                    font-weight: 600;
-                    color: red;
-                    background-color: transparent;
-                }
+                color: rgb(76, 77, 77);
+                font-weight: 600;
                 span {
                     display: block;
                     text-align: left;
@@ -435,7 +455,8 @@
                 height: 50px;
                 background-color: orange;
                 border-radius: 8px;
-                font-size: var(--fs-22);
+                font-weight: 900;
+                font-size: var(--fs-24);
                 &:hover {
                     transform: scale(110%);
                 }
@@ -451,13 +472,23 @@
             &::after{
                 content: '';
                 color: rgb(252, 69, 37);
-                font-size: var(--fs-70);
+                font-size: 100px;
                 font-weight: 600;
                 position: absolute;
                 left: 50%;
-                top: 20%;
+                top: 50%;
+                z-index: 9999;
                 transform: translate(-50%,-50%);
                 animation: countdown 5s ease-in-out forwards;
+            }
+            .count {
+                position: absolute;
+                inset: 0;
+                background-color: transparent;
+                z-index: 9999;
+                &.active {
+                    display: none;
+                }
             }
             .board {
                 width: 100%;

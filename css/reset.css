@@ -104,3 +104,26 @@ input {
         --fs-70: 55px;
     }
 }
+
+@media ( width < 400px) {
+    :root {
+        --fs-10: 6px;
+        --fs-11: 7px;
+        --fs-12: 8px;
+        --fs-13: 9px;
+        --fs-14: 10px;
+        --fs-15: 11px;
+        --fs-16: 12px;
+        --fs-18: 14px;
+        --fs-20: 16px;
+        --fs-22: 18px;
+        --fs-24: 20px;
+        --fs-26: 20px;
+        --fs-28: 24px;
+        --fs-30: 24px;
+        --fs-34: 28px;
+        --fs-36: 28px;
+        --fs-50: 36px;
+        --fs-70: 40px;
+    }
+}
