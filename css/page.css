@@ -336,7 +336,7 @@
 
 @keyframes countdown {
     0%{
-        content: '시작합니다!';
+        content: 'Ready!';
         opacity: 1;
     }
     40% {
@@ -594,12 +594,12 @@
                 margin-bottom: 20px;
             }
             > p {
-                font-size: var(--fs-22);
+                font-size: var(--fs-20);
                 margin-bottom: 20px;
             }
             > a {
                 display: inline-block;
-                font-size: var(--fs-20);
+                font-size: var(--fs-18);
                 background-color: rgb(74, 195, 252);
                 line-height: 50px;
                 width: 100px;

@@ -252,11 +252,12 @@
                 &::after{
                     content: '';
                     color: rgb(252, 69, 37);
-                    font-size: var(--fs-70);
+                    font-size: 40px;
                     font-weight: 600;
                     position: absolute;
                     left: 50%;
-                    top: 20%;
+                    top: 50%;
+                    z-index: 9999;
                     transform: translate(-50%,-50%);
                     animation: countdown 5s ease-in-out forwards;
                 }
