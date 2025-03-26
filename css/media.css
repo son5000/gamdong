@@ -192,9 +192,12 @@
                     font-size: var(--fs-36);
                     margin-bottom: 20px;
                     > span {
-                        background: url(/public/images/game/gamdong.png) no-repeat center / contain;
-                        text-indent: -9999px;
-                        color: transparent;
+                        > span {
+                            background: url(/public/images/game/gamdong.png) no-repeat center / contain;
+                            color: transparent;
+                            background-color: rgb(131, 194, 245);
+                            border-radius: 100%;
+                        }
                     }
                 }
                 b {
